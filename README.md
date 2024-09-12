@@ -3,6 +3,10 @@
 
 This is a todo list app that is built using Flutter, along with Riverpod for state management, and Strapi as the headless CMS. The GraphQL API of Strapi is used for performing the CRUD operations for this app.
 
+With this app you can:
+- Create a todo
+- Mark or unmark a todo
+- Delete a todo (long press)
 
 
 ## Environment Variables
