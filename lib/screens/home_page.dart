@@ -30,6 +30,9 @@ class HomePage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final screenHeight = MediaQuery.of(context).size.height;
+    final screenWidth = MediaQuery.of(context).size.width;
+
     final todos = ref.watch(taskProvider);
     final pendingTodos = findPendingTodos(todos);
     final completedTodos = findCompletedTodos(todos);
@@ -167,7 +170,7 @@ class HomePage extends ConsumerWidget {
                     ),
                     const SizedBox(height: 16.0),
                     SizedBox(
-                      height: 60,
+                      height: 0.06 * screenHeight,
                       width: double.infinity,
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(

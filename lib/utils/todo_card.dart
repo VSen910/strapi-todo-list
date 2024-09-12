@@ -13,6 +13,9 @@ class TodoCard extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final screenHeight = MediaQuery.of(context).size.height;
+    final screenWidth = MediaQuery.of(context).size.width;
+
     return InkWell(
       borderRadius: BorderRadius.circular(10),
       onTap: () async {
@@ -65,7 +68,7 @@ class TodoCard extends ConsumerWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(
-                    width: 350,
+                    width: 0.8 * screenWidth,
                     child: Text(
                       todo.title,
                       style: GoogleFonts.openSans(
@@ -81,7 +84,7 @@ class TodoCard extends ConsumerWidget {
                     children: [
                       const SizedBox(height: 8.0),
                       SizedBox(
-                        width: 350,
+                        width: 0.8 * screenWidth,
                         child: Text(
                           todo.description,
                           style: GoogleFonts.openSans(
